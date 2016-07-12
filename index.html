@@ -8,27 +8,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Registration form</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <title>Ella</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
 <body>
-  <div id="container-fluid">
-    <div id="row">
-      <div id="col-lg-6">
-        <form>
-          <input type="text" id="firstName" placeholder="First name"/> <br />
-          <input type="text"  id="lastName" placeholder="Last name" /> <br />
-          <input type="text"  id="email" placeholder="Email" /> <br />
-          <input type="text"  id="company" placeholder="Company" /> <br />
-          <input type="text"  id="phone" placeholder="Phone number" /> <br />
-          <input type="submit" name="Submit" />
-        </form>
+  <div id="fullpage">
+  <div class="section" id="cover">
+      <div class="valign center-align">
+          <h1 >Ella</h1>
+          <h3>The Unexpected Adventure</h3>
+      </div>
+  </div>
+  <div class="section">
+  <div class="container-fluid" style="padding-left: 0px">
+    <div class="row">
+      <div id="contact-col" class="col s12 l6">
+        <div class="card">
+            <div class="card-image">
+              <img src="images/contact.jpg">
+            </div>
+            <div class="card-content" style="color: #333333;">
+              <p><b>“Twenty years from now you will be more disappointed by the things you didn’t do than by the ones you did do”</b></p>
+              <p>Mark Twain</p>
+            </div>
+          </div>
+
+      </div>
+      <div class="col s12 l6">
+        <div class="col m8 offset-m2">
+          <div class="col s12">
+            <h2>Want to know more?</h2>
+          </div>
+          <form id="leadForm">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">account_circle</i>
+              <input type="text" id="firstName" class="validate" required="required" pattern="[A-Za-z]+"/>
+              <label for="firstName" data-error="Invalid name">First Name</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">account_circle</i>
+              <input type="text"  id="lastName" class="validate" required="required" pattern="[A-Za-z]+"/>
+              <label for="lastName" data-error="Invalid name">Last Name</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">email</i>
+              <input type="email"  id="email" class="validate" required="required"/>
+              <label for="email" data-error="Invalid email">Email</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">business</i>
+              <input type="text"  id="company" class="validate"/>
+              <label for="company">Company</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">phone</i>
+              <input type="text"  id="phone" class="validate" pattern="\+[0-9]+"/>
+              <label for="phone" data-error="Invalid phone number (+9412345617)">Phone Number</label>
+            </div>
+
+            <div class="col s12 center-align">
+              <a class="waves-effect waves-light btn" onclick="document.getElementById('leadForm').submit()">Send message</a>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
+  </div>
 
+  <div id="footer" class="section fp-auto-height">
+      <div class="center-align">Created by Prabashwara Seneviratne</div>
+  </div>
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+  <script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				verticalCentered: true
+			});
+		});
+	</script>
 </body>
 
 </html>
