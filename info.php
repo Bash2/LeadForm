@@ -12,6 +12,7 @@ if(isset($_POST["firstName"]) && isset($_POST["lastName"]) && isset($_POST["emai
 			'to'      => "{$_POST['firstName']} {$_POST['lastName']} <{$_POST['email']}>",
 			'subject' => 'Ella Info (Prabashwara\'s Task)',
 			'text'    => "Hello {$_POST['firstName']}! \r\nIf you are getting this email, that means the email functionality of my task works! This mail is being sent using Mailgun tied to a subdomain of my domain (bash.lk) \r\n-Prabash"));
+	 echo var_dump($result->http_response_body);
 } else {
 	echo 'Required parameters misssing';
 	http_response_code(406);
